@@ -15,7 +15,9 @@ app.use(cors());
 app.use(morgan('dev'));
 app.use(express.json());
 
-mongoose.connect('mongodb://127.0.0.1:27017/KleEcom')
+// password KUQTX5L0ajgImNFH
+let MONGODB_URL = 'mongodb+srv://jingadesushma85:KUQTX5L0ajgImNFH@cluster0.pfbr0n3.mongodb.net/?retryWrites=true&w=majority'
+mongoose.connect(MONGODB_URL)
 .then(()=>{
     console.log('db connected')
 }).catch((err)=>{
